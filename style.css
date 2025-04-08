@@ -433,6 +433,91 @@ body {
   background-color: #FFF;
   transform: rotate(45deg);
 }
+
+
+
+/* Buton stil */
+#deathButton {
+  position: fixed;
+  bottom: 20px; /* Alt kısma 20px mesafe */
+  left: 20px;   /* Sol kısma 20px mesafe */
+  background-color: #ff4d4d; /* Kırmızımsı bir renk */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Buton üzerine gelindiğinde animasyon */
+#deathButton:hover {
+  background-color: #ff2a2a;
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Buton tıklandığında efekt */
+#deathButton:active {
+  transform: scale(0.98);
+}
+
+/* Mesaj stil */
+#message {
+  position: absolute;
+  top: 50%; /* Ekranın ortasında */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #ff4d4d;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#message.show {
+  opacity: 1;
+}
+
+p {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: left;
+  background: rgba(165, 42, 174, 0.268);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes fadeInMessage {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+
 @media screen and (max-width: 420px) {
   .fishbowl {
     left: 13%;
